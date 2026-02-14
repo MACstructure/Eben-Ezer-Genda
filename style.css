@@ -69,7 +69,7 @@ nav a:hover {
     font-family: 'Playfair Display', serif;
     font-weight: 700;
     letter-spacing: 4px;
-    font-size: 1.4rem; /* Larger font size */
+    font-size: 1.15rem; /* Larger font size */
     border-top: 4px solid #3498db;
     box-shadow: inset 0 0 100px rgba(0,0,0,0.2);
 }
@@ -782,4 +782,5 @@ footer {
 }
 .menu-toggle.is-active .bar:nth-child(3) {
     transform: translateY(-9px) rotate(-45deg);
+
 }
