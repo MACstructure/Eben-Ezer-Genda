@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connect | Dr. Eben Ezer Genda</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+    <h1>DR. EBEN EZER <b>GENDA</b></h1>
+    
+    <div class="menu-toggle" id="mobile-menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+    </div>
+
+    <nav id="nav-list">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
+
+    <section class="contact-hero-deep">
+        <h2>Building the Future of Health.</h2>
+        <p>“True collaboration begins where expertise meets shared purpose. I look forward to our dialogue.”</p>
+    </section>
+
+    <main class="contact-wrapper">
+        
+        <div class="contact-info">
+            <h3>Professional Channels</h3>
+            
+            <div class="info-item">
+                <label>Professional Inquiries</label>
+                <p><a href="mailto:contact@drgendamedical.com" style="color:inherit; text-decoration:none;">contact@drgendamedical.com</a></p>
+            </div>
+
+            <div class="info-item">
+                <label>Academic & Speaking</label>
+                <p><a href="mailto:office.genda@university.edu" style="color:inherit; text-decoration:none;">office.genda@university.edu</a></p>
+            </div>
+
+            <div class="info-item">
+                <label>Social Presence</label>
+                <p>
+                    <a href="https://www.linkedin.com/in/eben-ezer-genda/" target="_blank" class="social-link">LinkedIn ↗</a>
+                </p>
+            </div>
+        </div>
+
+        <div class="contact-form-container">
+            <form id="contact-form" action="https://formspree.io/f/mkovjrry" method="POST">
+                <div class="form-group">
+                    <label>Full Name</label>
+                    <input type="text" name="name" placeholder="Name" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Email Address</label>
+                    <input type="email" name="email" placeholder="Email" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Message</label>
+                    <textarea name="message" rows="6" placeholder="Your message..." required></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn" id="submit-button">Submit</button>
+                <p id="form-status" style="margin-top:15px; font-weight:600; text-align:center;"></p>
+            </form>
+        </div>
+
+    </main>
+
+    <script>
+        const form = document.getElementById("contact-form");
+        
+        async function handleSubmit(event) {
+          event.preventDefault();
+          const status = document.getElementById("form-status");
+          const data = new FormData(event.target);
+          
+          fetch(event.target.action, {
+            method: form.method,
+            body: data,
+            headers: {
+                'Accept': 'application/json'
+            }
+          }).then(response => {
+            if (response.ok) {
+              status.innerHTML = "Thank you. Your message has been sent.";
+              status.style.color = "#27ae60";
+              form.reset();
+            } else {
+              response.json().then(data => {
+                if (Object.hasOwn(data, 'errors')) {
+                  status.innerHTML = data["errors"].map(error => error["message"]).join(", ");
+                } else {
+                  status.innerHTML = "Oops! There was a problem submitting your form";
+                }
+                status.style.color = "#e74c3c";
+              })
+            }
+          }).catch(error => {
+            status.innerHTML = "Oops! There was a problem connecting to the server";
+            status.style.color = "#e74c3c";
+          });
+        }
+        form.addEventListener("submit", handleSubmit)
+    </script>
+
+    <footer>
+        <p>&copy; 2026 Dr. Eben Ezer Genda. Advancing Global Health.</p>
+    </footer>
+
+    <script>
+    const menu = document.querySelector('#mobile-menu');
+    const navList = document.querySelector('#nav-list');
+
+    menu.addEventListener('click', function() {
+        // Toggle the 'active' class on the navigation
+        navList.classList.toggle('active');
+        
+        // Optional: Animate the 3 bars into an 'X'
+        menu.classList.toggle('is-active');
+    });
+</script>
+</body>
+</html>

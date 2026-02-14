@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | Dr. Eben Ezer Genda</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+    <h1>DR. EBEN EZER <b>GENDA</b></h1>
+    
+    <div class="menu-toggle" id="mobile-menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+    </div>
+
+    <nav id="nav-list">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
+    <section class="about-hero">
+       
+        <!-- <p style="font-size: 1.3rem;">The Intersection of Surgical Mastery and Social Mission.</p> -->
+    </section>
+
+    <section class="bio-section">
+        <div class="bio-text">
+             <h2>Biography</h2>
+            <h2>The Journey of Dr. Genda</h2>
+            <p>Dr. Eben Ezer Genda is a highly accomplished surgeon whose career is defined by a dual commitment to clinical precision and global healthcare reform. Born from a desire to make advanced surgical care a universal standard rather than a regional privilege, Dr. Genda has spent the last decade refining his expertise in <strong>Cardiac and Global Surgery</strong>.</p>
+            
+            <div class="quote-block">
+                "Medicine is more than a series of procedures; it is a sacred trust between a physician and a community to uphold the dignity of every life through science and empathy."
+            </div>
+
+            <p>Throughout his biography, one theme remains constant: <strong>Health Equity</strong>. Dr. Genda’s background spans multiple continents, from intensive surgical residencies in world-class trauma centers to leading mobile surgical units in underserved regions. This breadth of experience allows him to navigate complex clinical challenges with a perspective that is both technically rigorous and culturally sensitive.</p>
+            
+            <p style="margin-top: 20px;">Today, he serves as a lead consultant and researcher, focusing on how innovative surgical technologies can be adapted for low-resource environments without compromising on outcomes. His life’s work is dedicated to ensuring that the heart of the patient remains at the center of the medical progress.</p>
+        </div>
+    </section>
+
+    
+
+    <section class="affiliations">
+        <h3 style="color: #95a5a6; text-transform: uppercase; letter-spacing: 2px;">Professional Affiliations</h3>
+        <div class="logo-grid">
+            <span>American College of Surgeons</span>
+            <span>World Health Organization (WHO)</span>
+            <span>International Society of Surgery</span>
+            <span>Cardiac Surgeons Association</span>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Dr. Eben Ezer Genda. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+    const menu = document.querySelector('#mobile-menu');
+    const navList = document.querySelector('#nav-list');
+
+    menu.addEventListener('click', function() {
+        // Toggle the 'active' class on the navigation
+        navList.classList.toggle('active');
+        
+        // Optional: Animate the 3 bars into an 'X'
+        menu.classList.toggle('is-active');
+    });
+</script>
+</body>
+</html>

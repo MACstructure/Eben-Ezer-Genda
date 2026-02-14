@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Dr. Eben Ezer Genda</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+    <h1>DR. EBEN EZER <b>GENDA</b></h1>
+    
+    <div class="menu-toggle" id="mobile-menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+    </div>
+
+    <nav id="nav-list">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
+    <main>
+        <section class="portfolio-hero">
+            <p>Expertise in Action</p>
+            <h2>Advancing Surgical Excellence & Global Health Systems.</h2>
+        </section>
+
+        <div class="editorial-row">
+            <div class="editorial-img">
+                <img src="https://via.placeholder.com/800x1000?text=Global+Health" alt="Global Cardiac Project">
+            </div>
+            <div class="editorial-content">
+                <span>Field Leadership</span>
+                <h3>Cardiac Infrastructure Development</h3>
+                <p>Establishing sustainable surgical pathways in low-resource environments. This initiative focuses on the full lifecycle of cardiac care—from early screening to advanced post-operative recovery.</p>
+            </div>
+        </div>
+
+        <div class="editorial-row">
+            <div class="editorial-img">
+                <img src="https://via.placeholder.com/800x1000?text=Surgical+Innovation" alt="Technical Innovation">
+            </div>
+            <div class="editorial-content">
+                <span>Technical Innovation</span>
+                <h3>Scalable Surgical Protocols</h3>
+                <p>Developing adaptable minimally invasive frameworks that maintain high clinical outcomes while reducing the technical and financial barriers to surgical access.</p>
+            </div>
+        </div>
+
+        <section class="publication-section">
+            <h2 style="font-family: 'Playfair Display'; font-size: 2.2rem; margin-bottom: 50px;">Scholarly Contributions</h2>
+            
+            <a href="https://www.thelancet.com/global-health" target="_blank" class="pub-link">
+                <div class="pub-entry">
+                    <div class="journal-name">The Lancet Global Health <span class="external-icon">↗</span></div>
+                    <div class="article-title">"Economic Barriers to Essential Cardiac Care: A Multi-Regional Analysis"</div>
+                </div>
+            </a>
+
+            <a href="https://www.jtcvs.org/" target="_blank" class="pub-link">
+                <div class="pub-entry">
+                    <div class="journal-name">Journal of Thoracic Surgery <span class="external-icon">↗</span></div>
+                    <div class="article-title">"Long-term Durability in Prosthetic Valve Repairs: 10-Year Clinical Follow-up"</div>
+                </div>
+            </a>
+
+            <a href="https://link.springer.com/journal/268" target="_blank" class="pub-link">
+                <div class="pub-entry">
+                    <div class="journal-name">World Journal of Surgery <span class="external-icon">↗</span></div>
+                    <div class="article-title">"Establishing Rural Surgical Hubs: Lessons from the Sub-Saharan Initiative"</div>
+                </div>
+            </a>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Dr. Eben Ezer Genda. Advancing Global Health.</p>
+    </footer>
+
+    <script>
+    const menu = document.querySelector('#mobile-menu');
+    const navList = document.querySelector('#nav-list');
+
+    menu.addEventListener('click', function() {
+        // Toggle the 'active' class on the navigation
+        navList.classList.toggle('active');
+        
+        // Optional: Animate the 3 bars into an 'X'
+        menu.classList.toggle('is-active');
+    });
+</script>
+</body>
+</html>
