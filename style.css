@@ -33,6 +33,7 @@ header h1 {
     color: #2c3e50;
     margin-bottom: 15px;
     text-transform: uppercase;
+    text-align: center;
 }
 
 header h1 b { color: #3498db; }
@@ -784,6 +785,7 @@ footer {
     transform: translateY(-9px) rotate(-45deg);
 
 }
+
 
 
 
